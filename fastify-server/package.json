@@ -1,0 +1,31 @@
+{
+  "name": "employee-management-fastify-server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Microservices-based Fastify + TypeScript backend for Employee Management System (PostgreSQL, MySQL, MongoDB) in an npm workspaces monorepo.",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "build:apps": "npm run build --workspace apps/api-gateway && npm run build --workspace apps/auth-service",
+    "lint": "eslint . --ext .ts",
+    "typecheck": "tsc -b",
+    "test": "npm run test --workspaces",
+    "dev:api-gateway": "npm run dev --workspace apps/api-gateway",
+    "dev:auth-service": "npm run dev --workspace apps/auth-service"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.5.0"
+  }
+}
