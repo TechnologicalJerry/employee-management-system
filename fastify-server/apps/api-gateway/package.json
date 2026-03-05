@@ -1,0 +1,23 @@
+{
+  "name": "@employee-ms/api-gateway",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/server.js",
+  "types": "dist/server.d.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rimraf dist",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@employee-ms/core-config": "0.1.0",
+    "@employee-ms/core-http": "0.1.0",
+    "@employee-ms/core-logging": "0.1.0",
+    "fastify": "^5.0.0"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.0"
+  }
+}
