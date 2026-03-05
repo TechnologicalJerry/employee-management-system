@@ -1,0 +1,20 @@
+{
+  "name": "@employee-ms/core-http",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rimraf dist",
+    "lint": "eslint src --ext .ts",
+    "test": "echo \"No tests yet for core-http\""
+  },
+  "dependencies": {
+    "fastify": "^5.0.0",
+    "@fastify/cors": "^10.0.0",
+    "@fastify/rate-limit": "^10.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0"
+  }
+}
